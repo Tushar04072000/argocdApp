@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-argocd
+  name: mmy-argocd
 spec:
   replicas: 1
   selector:
@@ -16,4 +16,12 @@ spec:
         - name: argocd
           image: tushar04072000/web-app:01
           ports:
-            - containerPort: 80
+            - containerPort: 3000 # React default port
+          # Add resource requests/limits if needed
+          resources:
+            requests:
+              cpu: 100m
+              memory: 200Mi
+            limits:
+              cpu: 200m
+              memory: 400Mi
