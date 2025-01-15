@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: argocd
-          image: tushar04072000/web-app:01
+          image: tushar04072000/web-app:02
           ports:
             - containerPort: 5000 # React default port
           # Add resource requests/limits if needed
