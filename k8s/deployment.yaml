@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-argocd
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-argocd
+  template:
+    metadata:
+      labels:
+        app: my-argocd
+    spec:
+      containers:
+        - name: argocd
+          image: tushar04072000/web-app:01
+          ports:
+            - containerPort: 80
