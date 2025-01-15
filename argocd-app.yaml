@@ -9,7 +9,7 @@ spec:
   project: default
   source:
     path: k8s
-    repoURL: https://github.com/<your-github-username>/<your-repo-name>.git # Replace!
+    repoURL: https://github.com/Tushar04072000/argocdApp
     targetRevision: main # Or your branch name
   syncPolicy:
     automated:
